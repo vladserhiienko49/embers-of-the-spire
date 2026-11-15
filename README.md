@@ -1,10 +1,10 @@
-# Embers of the Spire
+﻿# Embers of the Spire
 
 A PS1-inspired dark fantasy action adventure built with Godot.
 
 The lamps of the Ashen Lands are going out one by one. On the Black Mountain an Eye has opened, and the only map to its altar was torn into pieces long ago. Rebuild the atlas, gather the shards of the ancient Seal and climb the mountain.
 
-- **Engine:** Godot 4.7.2 (Forward+), GDScript — standard build, no .NET
+- **Engine:** Godot 4.7.2 (Forward+), GDScript вЂ” standard build, no .NET
 - **Style:** PS1 / PSX dark fantasy: low-poly world, pixelated rendering, dithering, vertex wobble, ash and torchlight
 - **Platform:** developed and tested on Windows
 - **Status:** playable preview, in active development
@@ -72,17 +72,17 @@ Set `SYNTH_ONLY` to `sfx`, `ambient`, `music`, `finale`, `boss`, `mass`, `menu` 
 
 ## Project layout
 
-- `scripts/world` — world kits, enemies' brains, trials, events, horses
-- `scripts/player` — hero rig, armor, bow, camera effects
-- `scripts/ui` — menus, inventory, map scenes, card game
-- `scripts/audio`, `tools/audio_synth.gd` — audio manager and synthesiser
-- `quests/` and `quest_manager.gd` — quest data and manager
-- `docs/` — project website sources and roadmap
+- `scripts/world` вЂ” world kits, enemies' brains, trials, events, horses
+- `scripts/player` вЂ” hero rig, armor, bow, camera effects
+- `scripts/ui` вЂ” menus, inventory, map scenes, card game
+- `scripts/audio`, `tools/audio_synth.gd` вЂ” audio manager and synthesiser
+- `quests/` and `quest_manager.gd` вЂ” quest data and manager
+- `docs/` вЂ” project website sources and roadmap
 
 ## Licence
 
-The original source code is released under the [MIT License](LICENSE). The project's own procedural and synthesised content is distributed under the same terms unless a file says otherwise. MIT does not cover any third-party material — see [ASSETS.md](ASSETS.md) for the origin of the main assets.
+The original source code is released under the [MIT License](LICENSE). The project's own procedural and synthesised content is distributed under the same terms unless a file says otherwise. MIT does not cover any third-party material вЂ” see [ASSETS.md](ASSETS.md) for the origin of the main assets.
 
 ## Website
 
-The official site sources are in `docs/`. The public URL will be added here once GitHub Pages is enabled.
+The official site sources are in `docs/` and are published with GitHub Pages: https://vladserhiienko49.github.io/embers-of-the-spire/
