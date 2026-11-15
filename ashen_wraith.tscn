@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://ashen_wraith.gd" id="1_wraith"]
+
+[node name="AshenWraith" type="CharacterBody3D"]
+script = ExtResource("1_wraith")

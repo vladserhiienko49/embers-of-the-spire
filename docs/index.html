@@ -1,0 +1,244 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Embers of the Spire — PS1 Dark Fantasy Action Adventure</title>
+<meta name="description" content="Embers of the Spire is a PS1-inspired dark fantasy action adventure built with Godot: a ruined kingdom, a torn atlas, an awakened Eye on the Black Mountain.">
+<meta name="theme-color" content="#0b0908">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Embers of the Spire">
+<meta property="og:description" content="A PS1-inspired dark fantasy action adventure. Rebuild the torn atlas and reach the Eye on the Black Mountain.">
+<meta property="og:image" content="img/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<a class="skip" href="#main" data-i18n="skip">Skip to content</a>
+<canvas id="ash" aria-hidden="true"></canvas>
+
+<header class="nav" id="top">
+  <a class="brand" href="#top" aria-label="Embers of the Spire"><img src="favicon.svg" alt="" width="26" height="26"><span>EMBERS OF THE SPIRE</span></a>
+  <nav aria-label="Main">
+    <button class="burger" id="burger" aria-expanded="false" aria-controls="links" aria-label="Menu"><span></span><span></span><span></span></button>
+    <ul id="links">
+      <li><a href="#about" data-i18n="nav_about">About</a></li>
+      <li><a href="#features" data-i18n="nav_features">Features</a></li>
+      <li><a href="#world" data-i18n="nav_world">World</a></li>
+      <li><a href="#bestiary" data-i18n="nav_bestiary">Enemies</a></li>
+      <li><a href="#gallery" data-i18n="nav_gallery">Gallery</a></li>
+      <li><a href="#download" data-i18n="nav_download">Download</a></li>
+      <li class="lang" role="group" aria-label="Language"><button data-lang="en" aria-pressed="true">EN</button><button data-lang="uk" aria-pressed="false">UA</button></li>
+    </ul>
+  </nav>
+</header>
+
+<main id="main">
+<!-- HERO -->
+<section class="hero" aria-labelledby="h-title">
+  <div class="hero-bg" role="img" aria-label="The Black Mountain under a pale moon, a sword in the foreground"></div>
+  <div class="hero-in">
+    <p class="eyebrow" data-i18n="hero_eyebrow">A PS1-inspired dark fantasy action adventure</p>
+    <h1 id="h-title"><span>EMBERS</span> <small>OF THE</small> <span>SPIRE</span></h1>
+    <p class="tagline" data-i18n="hero_tag">The kingdom burned. The mountain remembers.</p>
+    <p class="lead" data-i18n="hero_lead">The lamps of the Ashen Lands are going out, one by one. Somewhere on the Black Mountain, an Eye has opened. Only a torn atlas remembers the way.</p>
+    <div class="cta">
+      <a class="btn primary" href="#download" data-i18n="btn_play">▶ Play / Download</a>
+      <a class="btn" href="#about" data-i18n="btn_explore">Explore the world</a>
+      <a class="btn ghost" data-link="repo" href="#" data-i18n="btn_github">GitHub</a>
+    </div>
+  </div>
+  <a class="scroll" href="#about" aria-label="Scroll"><span></span></a>
+</section>
+
+<!-- ABOUT -->
+<section id="about" class="sec">
+  <div class="wrap two">
+    <div class="reveal">
+      <p class="kicker" data-i18n="about_k">The game</p>
+      <h2 data-i18n="about_h">An ashen kingdom, an awakened Eye</h2>
+      <p data-i18n="about_p1">Embers of the Spire is a third-person action adventure in the chunky, wobbling style of the PlayStation era: low-poly ruins, vertex jitter, dithered shadows and a torch that is never quite bright enough.</p>
+      <p data-i18n="about_p2">You wake in the Village of Ash, where the roadside lamps are dying. The Order of the Seal once put the Eye to sleep — then tore the only map to its altar into eight pieces and gave them to guardians. Those guardians are now dead, mad or something worse.</p>
+      <p data-i18n="about_p3">Your goal: gather the pieces of the atlas, bind the three shards of the ancient Seal and climb the Black Mountain to face the Eye. Roads are watched, ruins are alive, and the night is long.</p>
+    </div>
+    <ul class="facts reveal" aria-label="Quick facts">
+      <li><b data-i18n="f1_b">Genre</b><span data-i18n="f1_s">Dark fantasy action adventure</span></li>
+      <li><b data-i18n="f2_b">Look</b><span data-i18n="f2_s">PS1 / PSX retro 3D</span></li>
+      <li><b data-i18n="f3_b">Engine</b><span>Godot 4.7 · GDScript</span></li>
+      <li><b data-i18n="f4_b">Platform</b><span data-i18n="f4_s">Windows (preview build)</span></li>
+      <li><b data-i18n="f5_b">Audio</b><span data-i18n="f5_s">Music and sound synthesised in code</span></li>
+      <li><b data-i18n="f6_b">Status</b><span data-i18n="f6_s">Playable preview, in development</span></li>
+    </ul>
+  </div>
+</section>
+
+<!-- FEATURES -->
+<section id="features" class="sec alt">
+  <div class="wrap">
+    <p class="kicker reveal" data-i18n="feat_k">What you can do</p>
+    <h2 class="reveal" data-i18n="feat_h">Built around danger and discovery</h2>
+    <div class="cards">
+      <article class="card reveal"><img loading="lazy" src="img/village.jpg" alt=""><div><h3 data-i18n="c1_h">A vast, gloomy world</h3><p data-i18n="c1_p">Villages, bridges, a lake fortress, ruined abbeys and a mountain trail with day and night, fog and weather. Enter huts, rest by the stove, pet a cat.</p></div></article>
+      <article class="card reveal"><img loading="lazy" src="img/knight.jpg" alt=""><div><h3 data-i18n="c2_h">Weighty combat</h3><p data-i18n="c2_p">Sword, shield with timed parries, bow, stamina and armor upgrades. Read the wind-ups, dodge the heavy blows, pick your moment.</p></div></article>
+      <article class="card reveal"><img loading="lazy" src="img/witch.jpg" alt=""><div><h3 data-i18n="c3_h">Strange enemies, real bosses</h3><p data-i18n="c3_p">A skeletal witch raising the dead from the earth, bone knights, blinking seers, an Ancient Mage who changes tactics, and the Eye Guardian himself.</p></div></article>
+      <article class="card reveal"><img loading="lazy" src="img/ruins.jpg" alt=""><div><h3 data-i18n="c4_h">Ancient ruins and trials</h3><p data-i18n="c4_p">Hold a gate against waves, wake runic pillars against the clock, break dark obelisks, survive the Bone Pit, follow a white stag, find a lost traveller in the fog.</p></div></article>
+      <article class="card reveal"><img loading="lazy" src="img/journal.jpg" alt=""><div><h3 data-i18n="c5_h">A story with weight</h3><p data-i18n="c5_p">A 13-step main quest with three mini-bosses, many side quests, mass battles with their own heavy soundtrack, and a finale that turns the dark to dawn.</p></div></article>
+      <article class="card reveal"><img loading="lazy" src="img/atlas.jpg" alt=""><div><h3 data-i18n="c6_h">The torn atlas</h3><p data-i18n="c6_p">The map starts in pieces. Bosses and trials guard the fragments, and you watch each one fly back into place — until the Black Mountain is finally revealed.</p></div></article>
+      <article class="card reveal"><img loading="lazy" src="img/bridge.jpg" alt=""><div><h3 data-i18n="c7_h">Horses and the open road</h3><p data-i18n="c7_p">Buy a horse from the stable-master, ride at walk, trot and gallop (gallop tires it), switch to a first-person view in the saddle — and trample ambushers.</p></div></article>
+      <article class="card reveal"><img loading="lazy" src="img/moonrise.jpg" alt=""><div><h3 data-i18n="c8_h">PS1 dark fantasy atmosphere</h3><p data-i18n="c8_p">Pixelated rendering, dithering, wobbling vertices, ash and torchlight. Surprise events on the road: ravens, strange voices, towering shapes in the distance.</p></div></article>
+    </div>
+  </div>
+</section>
+
+<!-- WORLD -->
+<section id="world" class="sec">
+  <div class="wrap two rev">
+    <figure class="reveal frame"><img loading="lazy" src="img/map.jpg" alt="The Atlas of the Forgotten Lands"><figcaption data-i18n="world_cap">The Atlas of the Forgotten Lands, in-game</figcaption></figure>
+    <div class="reveal">
+      <p class="kicker" data-i18n="world_k">The world and its history</p>
+      <h2 data-i18n="world_h">The Ashen Lands</h2>
+      <p data-i18n="world_p1">The Crown of the old kingdom fell, and its ashes still drift over the roads. The Black Mountain rose above the ruins, and on its summit the Eye — a thing the kingdom once put to sleep with a Seal made of three shards.</p>
+      <p data-i18n="world_p2">The Order of the Seal feared that someone would wake it again, so the monks tore the atlas that showed the road to the altar and handed the pieces to the people and knights they trusted most. Now the lamps along the road are going out, the guardians are changed, and the Eye is looking back.</p>
+      <ul class="tags"><li data-i18n="t1">Village of Ash</li><li data-i18n="t2">Forgotten Cemetery</li><li data-i18n="t3">Ruined Abbey</li><li data-i18n="t4">Ashen Citadel</li><li data-i18n="t5">Black Banner Fortress</li><li data-i18n="t6">Silent Stones</li><li data-i18n="t7">Black Mountain</li></ul>
+    </div>
+  </div>
+</section>
+
+<!-- BESTIARY -->
+<section id="bestiary" class="sec alt">
+  <div class="wrap">
+    <p class="kicker reveal" data-i18n="bs_k">Special enemies</p>
+    <h2 class="reveal" data-i18n="bs_h">Not all the dead lie still</h2>
+    <div class="beasts">
+      <article class="beast reveal"><h3 data-i18n="b1_h">Bone Widow</h3><p data-i18n="b1_p">A skeletal witch who keeps her distance, warns with raised arms and raises skeletons out of cracked earth. Interrupt her ritual, or kill her first.</p></article>
+      <article class="beast reveal"><h3 data-i18n="b2_h">Bone Jackals</h3><p data-i18n="b2_p">Fast skeleton warriors that circle you in packs and lunge from every side.</p></article>
+      <article class="beast reveal"><h3 data-i18n="b3_h">Bone Warden</h3><p data-i18n="b3_p">A slow, armored undead knight. It shrugs off ordinary hits, and its red-circle slams punish anyone standing still. Parry it.</p></article>
+      <article class="beast reveal"><h3 data-i18n="b4_h">Ashen Seer</h3><p data-i18n="b4_p">A caster that fires from afar and blinks away when you close in.</p></article>
+      <article class="beast reveal"><h3 data-i18n="b5_h">The Ancient Mage</h3><p data-i18n="b5_p">A mini-boss in the Ice Tower. He fans frost bolts, shields himself with orbiting spheres you must shatter, then rains ice spikes.</p></article>
+      <article class="beast reveal"><h3 data-i18n="b6_h">Guardian of the Eye</h3><p data-i18n="b6_p">The final boss: three phases, teleports with warning circles, shockwaves and fire. Defeat him, then tear the Eye from its altar.</p></article>
+    </div>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section id="gallery" class="sec">
+  <div class="wrap">
+    <p class="kicker reveal" data-i18n="gal_k">Gallery</p>
+    <h2 class="reveal" data-i18n="gal_h">Screenshots from the game</h2>
+    <p class="note reveal" data-i18n="gal_n">All images are real in-game captures (the interface is currently in Ukrainian).</p>
+    <div class="grid" id="grid">
+      <button class="shot wide" data-cap="g1"><img loading="lazy" src="img/moonrise.jpg" alt="Moonrise over the Black Mountain"></button>
+      <button class="shot" data-cap="g2"><img loading="lazy" src="img/mountain.jpg" alt="The Black Mountain by night"></button>
+      <button class="shot" data-cap="g3"><img loading="lazy" src="img/village.jpg" alt="The Village of Ash"></button>
+      <button class="shot" data-cap="g4"><img loading="lazy" src="img/castle.jpg" alt="The Ashen Citadel"></button>
+      <button class="shot" data-cap="g5"><img loading="lazy" src="img/tower.jpg" alt="The Eye altar tower at dusk"></button>
+      <button class="shot wide" data-cap="g6"><img loading="lazy" src="img/dawn.jpg" alt="Dawn after the Eye falls"></button>
+      <button class="shot" data-cap="g7"><img loading="lazy" src="img/fort.jpg" alt="Black Banner Fortress on the lake"></button>
+      <button class="shot" data-cap="g8"><img loading="lazy" src="img/river.jpg" alt="A wooden bridge over dark water"></button>
+      <button class="shot" data-cap="g9"><img loading="lazy" src="img/altar.jpg" alt="The Altar of the Eye"></button>
+      <button class="shot" data-cap="g10"><img loading="lazy" src="img/eye.jpg" alt="Tearing out the Eye"></button>
+      <button class="shot" data-cap="g11"><img loading="lazy" src="img/serpent.jpg" alt="The Eye's serpent form"></button>
+      <button class="shot" data-cap="g12"><img loading="lazy" src="img/battle.jpg" alt="A mass battle at night"></button>
+      <button class="shot" data-cap="g13"><img loading="lazy" src="img/arena.jpg" alt="The Bone Pit trial"></button>
+      <button class="shot" data-cap="g14"><img loading="lazy" src="img/hut.jpg" alt="A hunter's hut"></button>
+      <button class="shot" data-cap="g15"><img loading="lazy" src="img/inventory.jpg" alt="Inventory screen"></button>
+      <button class="shot" data-cap="g16"><img loading="lazy" src="img/cards.jpg" alt="A card game with the mage"></button>
+      <button class="shot" data-cap="g17"><img loading="lazy" src="img/ruins.jpg" alt="Ruins under the moon"></button>
+    </div>
+  </div>
+</section>
+
+<!-- DOWNLOAD -->
+<section id="download" class="sec dl">
+  <div class="wrap">
+    <div class="dlbox reveal">
+      <div>
+        <p class="kicker" data-i18n="dl_k">Download</p>
+        <h2>Embers of the Spire</h2>
+        <p class="sub" data-i18n="dl_sub">Windows build — playable preview</p>
+        <p data-i18n="dl_p">A single self-contained executable: no installer, no extra files. Early versions are rough — expect bugs and balance changes.</p>
+        <div class="cta">
+          <a class="btn primary big" data-link="release" href="#" data-i18n="dl_btn">Download for Windows</a>
+          <a class="btn ghost" data-link="repo" href="#" data-i18n="btn_github">GitHub</a>
+        </div>
+        <p class="small" id="dl-note" data-i18n="dl_note">The download link appears here as soon as the first GitHub Release is published.</p>
+      </div>
+      <div class="how">
+        <h3 data-i18n="how_h">How to run</h3>
+        <ol>
+          <li data-i18n="how1">Download <code>EmbersOfTheSpire.exe</code> from the Release page.</li>
+          <li data-i18n="how2">Put it in any folder and double-click it. If Windows SmartScreen warns about an unsigned app, choose “More info → Run anyway”.</li>
+          <li data-i18n="how3">The first launch builds the terrain and caches it; later launches are faster.</li>
+        </ol>
+        <h3 data-i18n="req_h">System requirements</h3>
+        <p data-i18n="req_p">Windows 10/11, 64-bit, a GPU with Vulkan support (the game uses Godot's Forward+ renderer). Exact minimum specifications have not been measured yet. The executable is about 120 MB.</p>
+        <h3 data-i18n="ctl_h">Controls</h3>
+        <p class="keys"><kbd>WASD</kbd> <kbd>Shift</kbd> <kbd>Space</kbd> <kbd>LMB</kbd> <kbd>Q</kbd> <kbd>E</kbd> <kbd>V</kbd> <kbd>B</kbd> <kbd>J</kbd> <kbd>M</kbd> <kbd>I</kbd> <kbd>H</kbd></p>
+        <p class="small" data-i18n="ctl_p">Move · sprint · jump · attack · shield/parry · interact · view · bow · journal · map · inventory · whistle for the horse.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DEV / ROADMAP -->
+<section id="dev" class="sec alt">
+  <div class="wrap two">
+    <div class="reveal">
+      <p class="kicker" data-i18n="dev_k">Development</p>
+      <h2 data-i18n="dev_h">Made in code</h2>
+      <p data-i18n="dev_p1">Embers of the Spire is an independent project written in GDScript on Godot 4.7. Almost everything is procedural: the landscape, buildings, textures, characters and faces are assembled from code, and every sound effect and music track is synthesised offline by the game's own tools.</p>
+      <p data-i18n="dev_p2">The project is developed step by step; the focus now is on content, combat variety and polish.</p>
+    </div>
+    <div class="reveal">
+      <p class="kicker" data-i18n="rm_k">Roadmap</p>
+      <h2 data-i18n="rm_h">What comes next</h2>
+      <p class="small" data-i18n="rm_note">Plans, not promises — these are not in the game yet.</p>
+      <ul class="road">
+        <li data-i18n="rm1">Balance, bug fixing and performance passes</li>
+        <li data-i18n="rm2">More trials, mini-bosses and dungeon content</li>
+        <li data-i18n="rm3">English interface and subtitles in the game</li>
+        <li data-i18n="rm4">Controller support and more settings</li>
+        <li data-i18n="rm5">Save slots</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- CREDITS -->
+<section id="credits" class="sec">
+  <div class="wrap two">
+    <div class="reveal">
+      <p class="kicker" data-i18n="cr_k">Credits</p>
+      <h2 data-i18n="cr_h">Credits</h2>
+      <p data-i18n="cr_p1">Design, code, procedural art and sound: the Embers of the Spire author. Built with the Godot Engine (MIT licence).</p>
+      <p data-i18n="cr_p2">The hero, enemies, world, music and sound effects are generated by the game's own code; no third-party models, animations or audio are used.</p>
+    </div>
+    <div class="reveal">
+      <p class="kicker" data-i18n="li_k">Licence and contact</p>
+      <h2 data-i18n="li_h">Licence</h2>
+      <p data-i18n="li_p">The source code and the project's own procedural content are released under the MIT License. See the repository for details.</p>
+      <p><a class="btn ghost" data-link="repo" href="#" data-i18n="btn_github">GitHub</a></p>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="foot">
+  <p>© Embers of the Spire · <span data-i18n="foot">Made with Godot. No tracking, no cookies.</span></p>
+  <a href="#top" data-i18n="totop">Back to top ↑</a>
+</footer>
+
+<div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="Image viewer" hidden>
+  <button class="lb-x" id="lb-x" aria-label="Close">×</button>
+  <button class="lb-n prev" id="lb-p" aria-label="Previous">‹</button>
+  <figure><img id="lb-img" alt=""><figcaption id="lb-cap"></figcaption></figure>
+  <button class="lb-n next" id="lb-nx" aria-label="Next">›</button>
+</div>
+
+<script src="js/config.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

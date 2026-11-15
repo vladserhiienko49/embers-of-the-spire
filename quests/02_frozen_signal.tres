@@ -1,0 +1,30 @@
+[gd_resource type="Resource" script_class="QuestData" format=3]
+
+[ext_resource type="Script" path="res://scripts/quests/quest_objective.gd" id="1_c8ho7"]
+[ext_resource type="Script" path="res://scripts/quests/quest_reward.gd" id="2_bjg2h"]
+[ext_resource type="Script" path="res://scripts/quests/quest_data.gd" id="3_klwwb"]
+
+[sub_resource type="Resource" id="Resource_xtgtr"]
+script = ExtResource("1_c8ho7")
+target_id = "building_ice_tower"
+text = "Дослідити синє світло в Крижаній вежі"
+
+[sub_resource type="Resource" id="Resource_eiljc"]
+script = ExtResource("1_c8ho7")
+type = 0
+target_id = "npc_scholar"
+text = "Повернутися до хранителя Ренна"
+
+[sub_resource type="Resource" id="Resource_iodpt"]
+script = ExtResource("2_bjg2h")
+coins = 8
+
+[resource]
+script = ExtResource("3_klwwb")
+id = "frozen_signal"
+title = "Сигнал із криги"
+giver_id = "npc_scholar"
+giver_name = "Хранитель Ренн"
+description = "Ренн помітив дивний синій спалах на Крижаній вежі. Перевір його джерело й повернися з відповіддю."
+objectives = Array[ExtResource("1_c8ho7")]([SubResource("Resource_xtgtr"), SubResource("Resource_eiljc")])
+rewards = Array[ExtResource("2_bjg2h")]([SubResource("Resource_iodpt")])

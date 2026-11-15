@@ -1,0 +1,55 @@
+[gd_scene format=3 uid="uid://kkd84gta5gny"]
+
+[ext_resource type="Script" uid="uid://d2ht0vwrm34e5" path="res://main.gd" id="1_1bvp3"]
+[ext_resource type="Script" uid="uid://bgueqtseuet1d" path="res://player.gd" id="1_ig7tw"]
+[ext_resource type="Script" uid="uid://crfggix78xs0g" path="res://world_generator.gd" id="5_lquwl"]
+[ext_resource type="Script" path="res://terrain_builder.gd" id="6_terrain"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_ihk4x"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_ihk4x"]
+
+[node name="main" type="Node3D" unique_id=757166644]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.1942272, 0)
+script = ExtResource("1_1bvp3")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1543811842]
+transform = Transform3D(-0.8660254, -0.43301278, 0.25, 0, 0.49999997, 0.86602545, -0.50000006, 0.75, -0.43301266, 0, 0, 0)
+shadow_enabled = true
+
+[node name="Player" type="CharacterBody3D" parent="." unique_id=2038139402]
+collision_layer = 1
+collision_mask = 3
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.3439753, 0)
+script = ExtResource("1_ig7tw")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Player" unique_id=1681607719]
+visible = false
+mesh = SubResource("CapsuleMesh_ihk4x")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Player" unique_id=739341147]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.04751706, 0)
+shape = SubResource("CapsuleShape3D_ihk4x")
+
+[node name="SpringArm3D" type="SpringArm3D" parent="Player" unique_id=1116158303]
+transform = Transform3D(1, 0, 0, 0, 0.9848077, 0.17364818, 0, -0.17364818, 0.9848077, 0, 1.2, 0)
+collision_mask = 0
+spring_length = 6.0
+
+[node name="Camera3D" type="Camera3D" parent="Player/SpringArm3D" unique_id=1470567546]
+transform = Transform3D(1, 0, 0, 0, 0.93969274, -0.34202015, 0, 0.34202015, 0.93969274, 0, 0, 0)
+current = true
+
+[node name="KnightFillLight" type="OmniLight3D" parent="Player"]
+position = Vector3(0.0, 1.6, 0.35)
+light_color = Color(0.82, 0.69, 0.48, 1)
+light_energy = 0.38
+omni_range = 5.5
+shadow_enabled = false
+
+[node name="WorldGenerator" type="Node3D" parent="." unique_id=2085096082]
+script = ExtResource("5_lquwl")
+
+[node name="TerrainSystem" type="Node3D" parent="WorldGenerator"]
+script = ExtResource("6_terrain")
+

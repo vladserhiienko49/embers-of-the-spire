@@ -1,0 +1,54 @@
+# Godot 4+ generated / cache
+.godot/
+.import/
+*.translation
+export_credentials.cfg
+export_presets.cfg.bak
+/android/
+
+# Build output (the Windows .exe is published via GitHub Releases, never committed)
+build/
+*.exe
+*.pck
+*.apk
+*.aab
+
+# Local saves, caches, logs
+user://
+*.save
+*.sav
+saves/
+*.log
+terrain_cache_*.bin
+
+# Tool output / knowledge graph
+graphify-out/
+
+# Temporary and OS files
+*.tmp
+*.bak
+*.swp
+*~
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# IDE / user-specific
+.vscode/
+.idea/
+*.code-workspace
+.claude/
+.mono/
+data_*/
+mono_crash.*.json
+
+# Secrets and credentials
+.env
+.env.*
+*.key
+*.pem
+*.p12
+*.pfx
+*.keystore
+secrets.*
+credentials.*

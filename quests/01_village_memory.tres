@@ -1,0 +1,30 @@
+[gd_resource type="Resource" script_class="QuestData" format=3]
+
+[ext_resource type="Script" path="res://scripts/quests/quest_objective.gd" id="1_82cry"]
+[ext_resource type="Script" path="res://scripts/quests/quest_reward.gd" id="2_1elcl"]
+[ext_resource type="Script" path="res://scripts/quests/quest_data.gd" id="3_61w10"]
+
+[sub_resource type="Resource" id="Resource_g1vxb"]
+script = ExtResource("1_82cry")
+target_id = "building_crypt"
+text = "Оглянути написи на Забутому кладовищі"
+
+[sub_resource type="Resource" id="Resource_1fhlb"]
+script = ExtResource("1_82cry")
+type = 0
+target_id = "npc_elder"
+text = "Повернутися до старости Мирона"
+
+[sub_resource type="Resource" id="Resource_avurj"]
+script = ExtResource("2_1elcl")
+coins = 6
+
+[resource]
+script = ExtResource("3_61w10")
+id = "village_memory"
+title = "Імена під попелом"
+giver_id = "npc_elder"
+giver_name = "Староста Мирон"
+description = "Мирон просить перевірити старі могильні плити. Хтось нещодавно викарбував нове ім'я серед загиблих лицарів."
+objectives = Array[ExtResource("1_82cry")]([SubResource("Resource_g1vxb"), SubResource("Resource_1fhlb")])
+rewards = Array[ExtResource("2_1elcl")]([SubResource("Resource_avurj")])

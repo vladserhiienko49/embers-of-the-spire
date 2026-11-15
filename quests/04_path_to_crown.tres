@@ -1,0 +1,52 @@
+[gd_resource type="Resource" script_class="QuestData" format=3]
+
+[ext_resource type="Script" path="res://scripts/quests/quest_objective.gd" id="1_y0ywb"]
+[ext_resource type="Script" path="res://scripts/quests/quest_reward.gd" id="2_l4dhe"]
+[ext_resource type="Script" path="res://scripts/quests/quest_data.gd" id="3_hvloq"]
+
+[sub_resource type="Resource" id="Resource_1rtbr"]
+script = ExtResource("1_y0ywb")
+type = 2
+target_id = "mountain_foot"
+text = "Дійти до підніжжя Чорної Гори"
+
+[sub_resource type="Resource" id="Resource_sqvgd"]
+script = ExtResource("1_y0ywb")
+type = 2
+target_id = "summit_crown"
+text = "Піднятися серпантином до руїн Попелястої Корони"
+
+[sub_resource type="Resource" id="Resource_cjt13"]
+script = ExtResource("1_y0ywb")
+target_id = "note_kings_last_words"
+text = "Прочитати послання біля входу в донжон"
+
+[sub_resource type="Resource" id="Resource_ggps8"]
+script = ExtResource("1_y0ywb")
+type = 0
+target_id = "npc_lamplighter"
+text = "Повернутися до Ореста з новиною"
+
+[sub_resource type="Resource" id="Resource_5u5bp"]
+script = ExtResource("2_l4dhe")
+coins = 20
+
+[resource]
+script = ExtResource("3_hvloq")
+id = "path_to_crown"
+title = "Шлях до Корони"
+category = "Сюжетне доручення"
+giver_id = "npc_lamplighter"
+giver_name = "Ліхтарник Орест"
+description = "Щоночі на вершині Чорної Гори жевріє вінець вогню. Орест вважає, що там досі лежить останнє послання короля. Піднімись серпантином до руїн Попелястої Корони й дізнайся правду."
+prerequisites = Array[String](["lamplighter_oil"])
+objectives = Array[ExtResource("1_y0ywb")]([SubResource("Resource_1rtbr"), SubResource("Resource_sqvgd"), SubResource("Resource_cjt13"), SubResource("Resource_ggps8")])
+rewards = Array[ExtResource("2_l4dhe")]([SubResource("Resource_5u5bp")])
+dialogue_offer = "Мій батько служив у варті Корони. Він казав, що в ніч падіння король піднявся на вершину сам і залишив там послання для того, хто прийде після нього.
+
+Серпантин починається там, де дорога з села впирається в гору. Іди вночі, бо віхи вздовж стежки світять тільки в темряві."
+accept_label = "ПРИЙНЯТИ: ШЛЯХ ДО КОРОНИ"
+dialogue_active = "Вінець на вершині сьогодні горить яскравіше. Ніби хтось на тебе чекає."
+dialogue_ready = "Ти був там... Що написав король? Ні, не кажи всього. Досить знати, що він не втік."
+turn_in_label = "РОЗПОВІСТИ ПРО ПОСЛАННЯ"
+dialogue_done = "Якщо Корона ще тліє, значить, королівство не вмерло до кінця. Бережи себе на тій горі."

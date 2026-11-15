@@ -1,0 +1,163 @@
+[gd_scene format=3]
+
+[sub_resource type="StandardMaterial3D" id="SteelMaterial"]
+albedo_color = Color(0.68, 0.76, 0.84, 1)
+metallic = 0.92
+roughness = 0.12
+
+[sub_resource type="StandardMaterial3D" id="EdgeMaterial"]
+albedo_color = Color(0.88, 0.92, 0.97, 1)
+metallic = 0.95
+roughness = 0.09
+
+[sub_resource type="StandardMaterial3D" id="DarkSteelMaterial"]
+albedo_color = Color(0.12, 0.17, 0.23, 1)
+metallic = 0.85
+roughness = 0.22
+
+[sub_resource type="StandardMaterial3D" id="GoldMaterial"]
+albedo_color = Color(0.72, 0.43, 0.12, 1)
+metallic = 0.82
+roughness = 0.22
+
+[sub_resource type="StandardMaterial3D" id="GripMaterial"]
+albedo_color = Color(0.12, 0.055, 0.035, 1)
+roughness = 0.88
+
+[sub_resource type="StandardMaterial3D" id="RuneMaterial"]
+albedo_color = Color(0.20, 0.55, 0.72, 1)
+metallic = 0.25
+roughness = 0.2
+emission_enabled = true
+emission = Color(0.08, 0.42, 0.72, 1)
+emission_energy_multiplier = 1.7
+
+[sub_resource type="BoxMesh" id="BladeMesh"]
+material = SubResource("SteelMaterial")
+size = Vector3(0.115, 0.78, 0.035)
+
+[sub_resource type="BoxMesh" id="BladeEdgeLeftMesh"]
+material = SubResource("EdgeMaterial")
+size = Vector3(0.012, 0.76, 0.008)
+
+[sub_resource type="BoxMesh" id="BladeEdgeRightMesh"]
+material = SubResource("EdgeMaterial")
+size = Vector3(0.012, 0.76, 0.008)
+
+[sub_resource type="CylinderMesh" id="BladeTipMesh"]
+material = SubResource("SteelMaterial")
+top_radius = 0.0
+bottom_radius = 0.058
+height = 0.18
+radial_segments = 4
+
+[sub_resource type="BoxMesh" id="FullerMesh"]
+material = SubResource("DarkSteelMaterial")
+size = Vector3(0.018, 0.55, 0.008)
+
+[sub_resource type="BoxMesh" id="GuardMesh"]
+material = SubResource("GoldMaterial")
+size = Vector3(0.40, 0.065, 0.085)
+
+[sub_resource type="SphereMesh" id="GuardEndMesh"]
+material = SubResource("GoldMaterial")
+radius = 0.045
+height = 0.09
+radial_segments = 10
+rings = 5
+
+[sub_resource type="CylinderMesh" id="GripMesh"]
+material = SubResource("GripMaterial")
+top_radius = 0.037
+bottom_radius = 0.042
+height = 0.29
+radial_segments = 10
+
+[sub_resource type="CylinderMesh" id="GripRingMesh"]
+material = SubResource("GoldMaterial")
+top_radius = 0.044
+bottom_radius = 0.044
+height = 0.022
+radial_segments = 10
+
+[sub_resource type="SphereMesh" id="PommelMesh"]
+material = SubResource("GoldMaterial")
+radius = 0.062
+height = 0.12
+radial_segments = 12
+rings = 6
+
+[sub_resource type="SphereMesh" id="RuneMesh"]
+material = SubResource("RuneMaterial")
+radius = 0.032
+height = 0.06
+radial_segments = 10
+rings = 5
+
+[sub_resource type="BoxShape3D" id="SwordHitShape"]
+size = Vector3(0.24, 0.95, 0.22)
+
+[node name="Sword" type="Node3D"]
+
+[node name="Blade" type="MeshInstance3D" parent="."]
+position = Vector3(0, 0.48, 0)
+mesh = SubResource("BladeMesh")
+
+[node name="BladeEdgeLeft" type="MeshInstance3D" parent="."]
+position = Vector3(-0.052, 0.48, 0.021)
+mesh = SubResource("BladeEdgeLeftMesh")
+
+[node name="BladeEdgeRight" type="MeshInstance3D" parent="."]
+position = Vector3(0.052, 0.48, 0.021)
+mesh = SubResource("BladeEdgeRightMesh")
+
+[node name="BladeTip" type="MeshInstance3D" parent="."]
+position = Vector3(0, 0.96, 0)
+mesh = SubResource("BladeTipMesh")
+
+[node name="Fuller" type="MeshInstance3D" parent="."]
+position = Vector3(0, 0.48, -0.022)
+mesh = SubResource("FullerMesh")
+
+[node name="Crossguard" type="MeshInstance3D" parent="."]
+position = Vector3(0, 0.055, 0)
+mesh = SubResource("GuardMesh")
+
+[node name="GuardEndLeft" type="MeshInstance3D" parent="."]
+position = Vector3(-0.19, 0.055, 0)
+mesh = SubResource("GuardEndMesh")
+
+[node name="GuardEndRight" type="MeshInstance3D" parent="."]
+position = Vector3(0.19, 0.055, 0)
+mesh = SubResource("GuardEndMesh")
+
+[node name="Grip" type="MeshInstance3D" parent="."]
+position = Vector3(0, -0.15, 0)
+mesh = SubResource("GripMesh")
+
+[node name="GripRingTop" type="MeshInstance3D" parent="."]
+position = Vector3(0, -0.055, 0)
+mesh = SubResource("GripRingMesh")
+
+[node name="GripRingBottom" type="MeshInstance3D" parent="."]
+position = Vector3(0, -0.245, 0)
+mesh = SubResource("GripRingMesh")
+
+[node name="Pommel" type="MeshInstance3D" parent="."]
+position = Vector3(0, -0.325, 0)
+mesh = SubResource("PommelMesh")
+
+[node name="Rune" type="MeshInstance3D" parent="."]
+position = Vector3(0, 0.09, 0.052)
+scale = Vector3(0.8, 1.2, 0.8)
+mesh = SubResource("RuneMesh")
+
+[node name="SwordHitbox" type="Area3D" parent="."]
+monitoring = false
+monitorable = false
+collision_layer = 0
+collision_mask = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="SwordHitbox"]
+position = Vector3(0, 0.48, 0)
+shape = SubResource("SwordHitShape")

@@ -1,0 +1,48 @@
+[gd_resource type="Resource" script_class="QuestData" format=3]
+
+[ext_resource type="Script" path="res://scripts/quests/quest_objective.gd" id="1_43cjx"]
+[ext_resource type="Script" path="res://scripts/quests/quest_reward.gd" id="2_htpij"]
+[ext_resource type="Script" path="res://scripts/quests/quest_data.gd" id="3_qhxis"]
+
+[sub_resource type="Resource" id="Resource_s5nkr"]
+script = ExtResource("1_43cjx")
+type = 1
+target_id = "lamp_oil"
+text = "Знайти флягу ліхтарної олії на Забутому кладовищі"
+
+[sub_resource type="Resource" id="Resource_gfual"]
+script = ExtResource("1_43cjx")
+type = 3
+target_id = "ashen_wraith"
+count = 2
+text = "Знищити попеляних вартових біля кладовища"
+
+[sub_resource type="Resource" id="Resource_h1v8d"]
+script = ExtResource("1_43cjx")
+type = 0
+target_id = "npc_lamplighter"
+text = "Повернутися до ліхтарника Ореста"
+
+[sub_resource type="Resource" id="Resource_c7158"]
+script = ExtResource("2_htpij")
+coins = 10
+item_id = "orest_lantern"
+item_name = "Ліхтар Ореста"
+
+[resource]
+script = ExtResource("3_qhxis")
+id = "lamplighter_oil"
+title = "Погаслі ліхтарі"
+giver_id = "npc_lamplighter"
+giver_name = "Ліхтарник Орест"
+description = "Ліхтарі вздовж дороги гаснуть один за одним. Орест просить принести флягу олії, яку він загубив біля Забутого кладовища, і прогнати попеляних вартових, що блукають між могилами."
+objectives = Array[ExtResource("1_43cjx")]([SubResource("Resource_s5nkr"), SubResource("Resource_gfual"), SubResource("Resource_h1v8d")])
+rewards = Array[ExtResource("2_htpij")]([SubResource("Resource_c7158")])
+dialogue_offer = "Бачиш вогні вздовж дороги? Я запалюю їх щоночі, відколи впала Корона. Тепер вони гаснуть: олії майже не лишилось, а свою останню флягу я впустив, коли тікав від вартових біля Забутого кладовища.
+
+Принеси олію і прожени тих мерців. Тоді віддам тобі свій старий ліхтар. Мені він уже ні до чого, а тобі в темряві знадобиться."
+accept_label = "ПРИЙНЯТИ: ПОГАСЛІ ЛІХТАРІ"
+dialogue_active = "Поки олії немає, ліхтарі гаснуть один за одним. Поспішай, мандрівнику."
+dialogue_ready = "Олія! І ти живий... Отже, вартові вже не встануть. Тримай ліхтар. Його вогонь не боїться вітру з Чорної Гори."
+turn_in_label = "ВІДДАТИ ОЛІЮ Й ОТРИМАТИ НАГОРОДУ"
+dialogue_done = "Вогні знову горять. Дякую тобі. Хоча... є ще одна справа, про яку я боюся навіть думати."
